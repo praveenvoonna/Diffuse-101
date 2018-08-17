@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DeFuse 101</title>
+    <meta name="description" content="">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/aos.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+    <script>
+      //window.onbeforeunload = alert('H')
+      for(var i=0;i<10;i++){
+        localStorage.removeItem(i)
+      }
+      document.onkeydown = function() {    
+    switch (event.keyCode) { 
+        case 116 : //F5 button
+            event.returnValue = false;
+            event.keyCode = 0;
+            return false; 
+        case 82 : //R button
+            if (event.ctrlKey) { 
+                event.returnValue = false; 
+                event.keyCode = 0;  
+                return false; 
+            } 
+    }
+}
+    </script>
+  </head>
+  <body id="top">
+    <header>
+      <div class="profile-page sidebar-collapse">
+        <nav class="navbar navbar-expand-lg fixed-top navbar-transparent bg-primary" color-on-scroll="400">
+          <div class="container">
+            <div class="navbar-translate">
+              <a class="navbar-brand" href="#" rel="tooltip">
+                <strong>DeFuse 101</strong>
+              </a>
+            </div>
+            <div class="collapse navbar-collapse justify-content-end" id="navigation">
+              <ul class="navbar-nav">
+                <li class="nav-item" id="timer" style="color:#fff"></li> 
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div class="page-content">
+      <div>
+<div class="profile-page">
+  <div class="wrapper">
+    <div class="page-header page-header-small" filter-color="green">
+      <div class="page-header-image" data-parallax="true" style="background-image: url('images/cc-bg-1.jpg');"></div>
+      <div class="container">
+        <div class="content-center">
+          <div class="cc-profile-image"><a href="#"><img src="images/anthony.jpg" alt="Image"/></a></div>
+          <div class="h2 title">Technovation 2018</div>
+          <p class="category text-white">Future is 0 1 click away.</p>
+        </div>
+      </div>
+  </div>
+</div>
+<div class="section" id="about">
+  <div class="container">
+    <div class="card" data-aos="fade-up" data-aos-offset="10">
+      <div class="row">
+        <div class="col-lg-6 col-md-12">
+          <div class="card-body">
+            <div class="h4 mt-0 title">Rules</div>
+            <p>Read the instructions carefully.</p>
+			<p>1. The maximum time limit for diffuse 101 is 1hr.You have to debug all three codes within the time limit otherwise the bobm will explode.</p>
+		    <p>2. Read each line carefully and detect the errors and then write the correct line in the section below.Then press enter.Then write next line and so on.</p>
+			<p>3. You will have three questions to debug and maximum attempts for each question is 10times.If you exceed the maximum no. of attempts,the bomb will explode.</p>
+          </div>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section" id="experience">
+  <div class="container cc-experience">
+    <div class="h4 text-center mb-4 title" id="questionNo">Question 1</div>
+    <div class="card">
+      <div class="row">
+        <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+          <div class="card-body cc-experience-header">
+            <p></p>
+            <div class="h5">C</div>
+          </div>
+        </div>
+        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+          <div class="card-body">
+            <div class="h5">Go ahead!</div>
+            <pre id="ques"> 
+              <xmp id="code">
+                  //C Program to Reverse a Number
+                  #include <stdio.h>
+                  #include <string.h>
+ 
+                  void reverse(char [], int, int);
+                  int main()
+                  {
+                      char str1[20];
+                      int size;
+                  
+                      printf("Enter a string to reverse: ");
+                      scanf("%s", str1);
+                      size = strlen(str1);
+                      reverse(str1, 0, size);
+                      printf("The string after reversing is: %s\n", str1);
+                      return 0;
+                  }
+                  
+                  void reverse(char str1[], int index, int size)
+                  {
+                      char temp;
+                      temp = str1[index];
+                      str1[index] = str1[size - index];
+                      str1[index - size] = temp;
+                      if (index == size / 4)
+                      {
+                          return;
+                      }
+                      reverse(str1, index + 2, size);
+                  }
+              </xmp>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<img src="" alt="" srcset="">
+<div class="section" id="contact">
+  <div class="cc-contact-information" style="background-image: url('images/code.jpeg');">
+    <div class="container">
+      <div class="cc-contact">
+        <div class="row">
+          <div class="col-md-9">
+            <div class="card mb-0" data-aos="zoom-in">
+              <div class="h4 text-center title">Answer please!</div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="card-body">
+                      <div class="p pb-3"><strong>Check your answer</strong></div>
+                      <div class="row mb-2">
+                        <div class="col">
+                          <div class="form-group">
+                            <textarea class="form-control" id="ansBox" name="message" rows= "18" cols="20" placeholder="Your Answer" required="required"></textarea>
+                          </div>
+                        </div> 
+                      </div> 
+
+                      <div class="row">
+                        <div class="col">
+                          <button class="btn btn-primary" type="submit" onclick="Print()">Check</button>
+                        </div>
+                        <div class="col">
+                          <button class="btn btn-primary" id="nextBtn" type="submit" disabled="true" onclick="Next()">Next</button>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card-body">
+                    <p class="mb-0"><strong>You have to write the output by executing the program.</strong></p>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></div>
+    </div>
+    <footer class="footer">
+      <div class="h4 title text-center">Technovation 2018</div>
+    </footer>
+    <script src="js/core/jquery.3.2.1.min.js"></script>
+    <script src="js/core/popper.min.js"></script>
+    <script src="js/core/bootstrap.min.js"></script>
+    <script src="js/now-ui-kit.js?v=1.1.0"></script>
+    <script src="js/aos.js"></script>
+    <script src="scripts/main.js"></script>
+    <script>
+      function Bomb(){
+        window.open('./bomb.html','','fullscreen=yes')
+        window.close()
+      }
+      function Defuse(){
+        window.open('./defused.html?time='+EndTime,'','fullscreen=yes')
+        window.close()
+      }
+      document.addEventListener('contextmenu', event => event.preventDefault());
+      var EndTime=60*60;
+      var counter=0;
+      setInterval(function(){
+        document.getElementById('timer').innerHTML=Math.floor((EndTime/60))+" Mins "+(EndTime%60)+" Secs"
+        EndTime=EndTime-1;
+        if(EndTime==0)
+          //alert('Bomb Triggerred!')
+          Bomb()
+        },1000)
+      function Print(){
+        if(document.getElementById('questionNo').innerHTML=="Question 1"){
+          var correctAns=
+            "reverse(str1, 0, size - 1);"+"\n"+
+            "str1[size - index] = temp;"+"\n"+
+            "if (index == size / 2)"+"\n"+
+            "reverse(str1, index + 1, size);"
+        }
+        else if(document.getElementById('questionNo').innerHTML=="Question 2"){
+          var correctAns=
+            'scanf("%f",&x);'+"\n"+
+            'for(i=1;i<=n;i++)'+"\n"+
+            't=(t*(-1)*x*x)/(2*i*(2*i+1));'+"\n"+
+            'sum=sum+t;'
+        }
+        else if(document.getElementById('questionNo').innerHTML=="Question 3"){
+          var correctAns=
+            'for(i=1;i<=m;i++)'+"\n"+
+            'for(j=1;j<=m;j++)'+"\n"+
+            'd=(f[1][1]*f[2][2])-(f[1][2]*f[2][1]);'+"\n"+
+            'for(j=1;j<=x;j++)'+"\n"+
+            'int r=1,s=1;'+"\n"+
+            'for(p=1;p<=x;p++)'+"\n"+
+            'if(p!=1&&q!=j)'+"\n"+
+            'if(s>x-1)'+"\n"+
+            's=1;'+"\n"+
+            'd=d+(f[1][j]*c[j]);'
+        }
+        var ansBox=document.getElementById("ansBox").value;
+        localStorage.setItem(counter,ansBox);
+        if(ansBox == correctAns){
+          document.getElementById('nextBtn').disabled=false
+          if(document.getElementById('questionNo').innerHTML=="Question 3"){
+            Defuse()
+          }
+        }
+        else{
+          counter++
+          alert('Wrong Answer!\nYou have '+(10-counter)+' tries remaining.')
+          if(counter==10)
+            Bomb()
+        }
+      }
+      function Next(){
+        if(document.getElementById('questionNo').innerHTML=="Question 1"){
+          document.getElementById('questionNo').innerHTML="Question 2"
+          document.getElementById('ques').innerHTML=
+            "//c program to find out sine series"+"\n"+
+            "#include<stdio.h>"+"\n"+
+            "#include<conio.h>"+"\n"+
+
+            "void main()"+"\n"+
+            "{"+"\n"+
+              "int i, n;"+"\n"+
+              "float x, sum, t;"+"\n"+
+
+                'printf(" Enter the value for x : ");'+"\n"+
+                'scanf("%d",&x);'+"\n"+
+
+                'printf(" Enter the value for n : ");'+"\n"+
+                'scanf("%d",&n);'+"\n"+
+
+                'x=x*3.14159/180;'+"\n"+
+                't=x;'+"\n"+
+                'sum=x;'+"\n"+
+
+                '/* Loop to calculate the value of Sine */'+"\n"+
+                'for(i=0;i<=n;i++)'+"\n"+
+                '{'+"\n"+
+                    't=(t*(1)*x*x)/(2*i*(2*i-1));'+"\n"+
+                    'sum=sum-t;'+"\n"+
+                '}'+"\n"+
+
+                'printf(" The value of Sin(%f) = %.4f",x,sum);'+"\n"+
+            '}'
+            document.getElementById('nextBtn').disabled=true
+        }
+        else if(document.getElementById('questionNo').innerHTML=="Question 2"){
+          document.getElementById('questionNo').innerHTML="Question 3"
+          document.getElementById('ques').innerHTML=
+            "//c program to find determinant of n*n matrix"+"\n"+
+            '#include<conio.h>'+"\n"+
+            '#include<stdio.h>'+"\n"+
+
+            'int a[20][20],m;'+"\n"+
+            'int determinant(int f[20][20],int a);'+"\n"+
+            'int main()'+"\n"+
+            '{'+"\n"+
+              'int i,j;'+"\n"+
+              'printf("\\nEnter order of matrix : ");'+"\n"+
+              'scanf("%d",&m);'+"\n"+
+              'printf("Enter the elements of matrix");'+"\n"+
+              'for(i=1;i<=m;i--)'+"\n"+
+              '{'+"\n"+
+              'for(j=1;m<=j;j++);'+"\n"+
+              '{'+"\n"+
+              'printf("a[%d][%d] = ",i,j);'+"\n"+
+              'scanf("%d",&a[i][j]);'+"\n"+
+              '}'+"\n"+
+              '}'+"\n"+
+              'printf("--------- Matrix A is --------------");'+"\n"+    
+              'for(i=1;i<=m;i++)'+"\n"+
+                '{'+"\n"+
+                      'for(j=1;j<=m;j++)'+"\n"+
+                      '{'+"\n"+     
+                          'printf("%d",a[i][j]);'+"\n"+
+                      '}'+"\n"+
+                '}'+"\n"+
+              'printf("Determinant of Matrix A is %d .",determinant(a,m));'+"\n"+
+
+            '}'+"\n"+
+
+            'int determinant(int f[20][20],int x)'+"\n"+
+            '{'+"\n"+
+              'int pr,c[20],d=0,b[20][20],j,p,q,t;'+"\n"+
+              'if(x==2)'+"\n"+
+              '{'+"\n"+
+                'd=1;'+"\n"+
+                'd=(f[1][2]*f[2][1])-(f[2][2]*f[1][1]);'+"\n"+
+                'return(d);'+"\n"+
+              '}'+"\n"+
+              'else'+"\n"+
+              '{'+"\n"+
+                'for(j=5;j<=x;j++)'+"\n"+
+                '{        '+"\n"+
+                  'int r=1,s=3;'+"\n"+
+                  'for(p=2;p<=x;p++)'+"\n"+
+                    '{'+"\n"+
+                      'for(q=1;q<=x;q++)'+"\n"+
+                        '{'+"\n"+
+                          'if(p==1||q==j)'+"\n"+
+                          '{'+"\n"+
+                            'b[r][s]=f[p][q];'+"\n"+
+                            's++;'+"\n"+
+                            'if(s>x)'+"\n"+
+                            '{'+"\n"+
+                              'r++;'+"\n"+
+                              's=0;'+"\n"+
+                              '}'+"\n"+
+                          '}'+"\n"+
+                        '}'+"\n"+
+                    '}'+"\n"+
+                'for(t=1,pr=1;t<=(1+j);t++)'+"\n"+
+                'pr=(-1)*pr;'+"\n"+
+                'c[j]=pr*determinant(b,x-1);'+"\n"+
+                '}'+"\n"+
+                'for(j=1,d=0;j<=x;j++)'+"\n"+
+                '{'+"\n"+
+                  'd=d+(f[j]*c[1][j]);'+"\n"+
+                  '}'+"\n"+
+                'return(d);'+"\n"+
+              '}'+"\n"+
+            '}'
+            document.getElementById('nextBtn').innerHTML="Defuse"
+            document.getElementById('nextBtn').disabled=true
+          }
+      }
+    </script>
+  </body>
+</html>
